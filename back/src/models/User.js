@@ -40,4 +40,6 @@ const User = sequelize.define('User', {
 
 });
 
+//Relacionamentos
+
 module.exports = User;
