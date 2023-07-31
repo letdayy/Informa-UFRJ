@@ -1,33 +1,15 @@
 import React from "react";
-import { ButtonText, ConfirmButton, InputArea, InputBox, InputText, Logo, Screen } from "./style";
-import { View, Text } from "react-native";
+import { Back, BackButton, ButtonText, ConfirmButton, Logo, Screen } from "./style";
+import FormAreaComponent from "../../components/Register/FormArea";
 
 export default function Register() {
     return (
         <Screen>
+            <BackButton>
+                <Back source={require('../../assets/back-icon.png')} />
+            </BackButton>
             <Logo source={require('../../assets/Logo.png')} />
-            <InputArea>
-                <InputBox>
-                    <InputText>
-                        Digite seu usuário
-                    </InputText>
-                </InputBox>
-                <InputBox>
-                    <InputText>
-                        Digite seu e-mail da UFRJ
-                    </InputText>
-                </InputBox>
-                <InputBox>
-                    <InputText>
-                        Digite sua senha
-                    </InputText>
-                </InputBox>
-                <InputBox>
-                    <InputText>
-                        Digite sua senha
-                    </InputText>
-                </InputBox>
-            </InputArea>
+            <FormAreaComponent />
             <ConfirmButton>
                 <ButtonText>Cadastrar</ButtonText>
             </ConfirmButton>
