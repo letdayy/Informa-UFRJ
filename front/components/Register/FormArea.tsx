@@ -1,5 +1,5 @@
 import React from "react";
-import { Input, InputArea, InputBox, InputIcon, RevealButton, RevealIcon } from "./style";
+import { Input, InputArea, InputBox, InputIcon, Button, RevealIcon } from "./style";
 import { useForm, Controller } from 'react-hook-form'
 
 
@@ -63,9 +63,9 @@ export default function FormAreaComponent() {
                         />
                     )}
                 />
-                <RevealButton>
+                <Button>
                     <RevealIcon source={require('../../assets/eye-icon.png')} />
-                </RevealButton>
+                </Button>
             </InputBox>
             <InputBox>
                 <InputIcon source={require('../../assets/password-icon.png')} />
@@ -82,9 +82,9 @@ export default function FormAreaComponent() {
                         />
                     )}
                 />
-                <RevealButton>
+                <Button>
                     <RevealIcon source={require('../../assets/eye-icon.png')} />
-                </RevealButton>
+                </Button>
             </InputBox>
         </InputArea>
     )

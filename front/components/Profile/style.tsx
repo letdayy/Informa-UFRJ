@@ -1,12 +1,10 @@
 import styled from "styled-components/native"
 
-
+export const Button = styled.TouchableOpacity`
+`
 export const AddPhtArea= styled.View`
 display:flex;
 align-items: center;
-`
-
-export const AddPhtButton = styled.TouchableOpacity`
 `
 
 export const ProfileIcon = styled.Image`
@@ -29,9 +27,6 @@ justify-content: space-between;
 height: 45%;
 width:80%;
 margin-top: 60px;
-`
-
-export const OptionButton = styled.TouchableOpacity`
 `
 
 export const Option = styled.View`

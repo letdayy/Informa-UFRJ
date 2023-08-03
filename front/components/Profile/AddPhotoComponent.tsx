@@ -1,12 +1,12 @@
 import React from "react";
-import { AddPhtArea, AddPhtButton, ProfileIcon, UsernameText } from "./style";
+import { AddPhtArea, Button, ProfileIcon, UsernameText } from "./style";
 
 export default function Profile() {
     return (
         <AddPhtArea>
-            <AddPhtButton>
+            <Button>
                 <ProfileIcon source={require('../../assets/user-icon.png')} />
-            </AddPhtButton>
+            </Button>
             <UsernameText>
                 Username
             </UsernameText>

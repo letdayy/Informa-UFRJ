@@ -1,5 +1,5 @@
 import React from "react";
-import { Option, OptionButton, OptionText } from "./style";
+import { Option, Button, OptionText } from "./style";
 
 type OptionInfo = {
     text: string;
@@ -8,12 +8,12 @@ type OptionInfo = {
 
 export default function OptionComponent({text}:OptionInfo) {
     return (
-        <OptionButton>
+        <Button>
             <Option>
                 <OptionText>
                     {text}
                 </OptionText>
             </Option>
-        </OptionButton>
+        </Button>
     )
 }

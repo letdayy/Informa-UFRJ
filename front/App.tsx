@@ -7,7 +7,7 @@ import Favorites from "./pages/Favorites/Favorites";
 
 export default function App() {
   return (
-    <Favorites/>
+    <Register/>
   );
 }
 

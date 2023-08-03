@@ -17,7 +17,7 @@ width: 22px;
 height:22px;
 margin: 0 8px;
 `
-export const RevealButton= styled.TouchableOpacity`
+export const Button= styled.TouchableOpacity`
 `
 
 export const InputBox = styled.View`
