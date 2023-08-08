@@ -13,5 +13,12 @@ const Post = sequelize.define('Post', {
     },
 });
 //Relacionamentos
+Post.associate = function(models){
+    Post.belongsToMany(models.User, {
+        through: models.Coments,
+        constraints: false
+    });
 
+    Post.belongsTo(models.User);
+}
 module.exports = Post;

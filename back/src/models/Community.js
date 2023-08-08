@@ -9,5 +9,11 @@ const Community = sequelize.define('Community', {
 });
 
 //Relacionamentos
-
+Community.associate = function(models){
+    Community.belongsToMany(models.User, {
+        through: models.Favorites,
+        as: 'Favorited',
+        constraints: false
+    });
+}
 module.exports = Community;

@@ -23,6 +23,7 @@ require('../models/Coments');
 require('../models/Community')
 require('../models/Post');
 require('../models/User');
+require('../models/Favorites');
 
 for (mod in sequelize.models) {
   if (sequelize.models[mod].associate instanceof Function) {

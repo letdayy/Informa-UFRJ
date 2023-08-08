@@ -8,6 +8,4 @@ const Coments = sequelize.define('Coments', {
     },
 });
 
-//Relacionamentos
-
 module.exports = Coments;

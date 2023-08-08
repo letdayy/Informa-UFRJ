@@ -41,5 +41,30 @@ const User = sequelize.define('User', {
 });
 
 //Relacionamentos
+User.associate = function(models){
+    User.belongsToMany(models.User, {
+        through: 'Follow',
+        as: 'following',
+        foreignKey: 'followingId'
+    });
+
+    User.belongsToMany(models.User, {
+        through: 'Follow',
+        as: 'followed',
+        foreignKey: 'followedId'
+    });
+
+    User.belongsToMany(models.Post, {
+        through: models.Coments,
+        constraints: false
+    });
+
+    User.hasMany(models.Post);
+    
+    User.belongsToMany(models.Community, {
+        through: models.Favorites,
+        constraints: false
+    });
+};
 
 module.exports = User;
