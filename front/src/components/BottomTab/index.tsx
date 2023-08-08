@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "react-native";
-import { NavigationContainer, NavigationImg } from "./style";
+import { NavigationContainer, Icons } from "./style";
 
 // icones
 import AccountIcon from "./../../../assets/accountIcon.svg";
@@ -10,13 +10,13 @@ import SquaresIcon from "./../../../assets/squaresIcon.svg";
 export default function BottomTab() {
   return (
   <NavigationContainer>
-    <NavigationImg
+    <Icons
         source= {AccountIcon}
     />
-    <NavigationImg
+    <Icons
         source={HomeIcon} 
     />
-    <NavigationImg
+    <Icons
         source={SquaresIcon} 
     />
   </NavigationContainer>
