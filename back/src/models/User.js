@@ -55,7 +55,7 @@ User.associate = function(models){
     });
 
     User.belongsToMany(models.Post, {
-        through: models.Coments,
+        through: models.Comments,
         constraints: false
     });
 

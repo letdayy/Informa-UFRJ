@@ -15,7 +15,7 @@ const Post = sequelize.define('Post', {
 //Relacionamentos
 Post.associate = function(models){
     Post.belongsToMany(models.User, {
-        through: models.Coments,
+        through: models.Comments,
         constraints: false
     });
 
