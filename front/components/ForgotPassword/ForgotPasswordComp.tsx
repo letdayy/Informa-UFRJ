@@ -29,10 +29,7 @@ export default function ForgotPasswordComp() {
                 />
             </InputBox>
             <SessionText>
-                Você receberá por e-mail um link para
-            </SessionText>
-            <SessionText style={{marginTop:'0px'}}>
-                cadastrar uma nova Senha
+                Você receberá por e-mail um link para cadastrar uma nova Senha
             </SessionText>
             <SendButton>
                 Enviar

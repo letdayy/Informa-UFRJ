@@ -45,6 +45,7 @@ export const SessionText = styled.Text`
 font-size: 20px;
 font-weight: 600;
 margin-top: 36px;
+text-align: center;
 `
 
 export const SendButton = styled.TouchableOpacity`
