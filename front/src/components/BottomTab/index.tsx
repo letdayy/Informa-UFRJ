@@ -1,24 +1,16 @@
 import React from "react";
-import { Image } from "react-native";
 import { NavigationContainer, Icons } from "./style";
 
-// icones
-import AccountIcon from "./../../../assets/accountIcon.svg";
-import HomeIcon from "./../../../assets/homeIcon.svg";
+// Icones
+import { FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
 import SquaresIcon from "./../../../assets/squaresIcon.svg";
 
 export default function BottomTab() {
   return (
-  <NavigationContainer>
-    <Icons
-        source= {AccountIcon}
-    />
-    <Icons
-        source={HomeIcon} 
-    />
-    <Icons
-        source={SquaresIcon} 
-    />
-  </NavigationContainer>
-  )
+    <NavigationContainer>
+      <FontAwesome name="user-circle" size={30} color="#048C7C" />
+      <MaterialCommunityIcons name="home-circle" size={36} color="#048C7C" />
+      <Icons source={SquaresIcon} />
+    </NavigationContainer>
+  );
 }

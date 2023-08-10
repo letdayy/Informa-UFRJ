@@ -2,14 +2,15 @@ import styled from "styled-components/native"
 import { Dimensions } from "react-native";
 
 const heightImgPost= 0.4 * Dimensions.get("screen").width; //Altura muda conforme a largura da tela
-const width= 0.4 * Dimensions.get("screen").height; //Altura muda conforme a largura da tela
+// const width= 0.4 * Dimensions.get("screen").height; //Altura muda conforme a largura da tela
 
 export const CardContainer = styled.View`
     background: #D9D9D9;
     border-radius: 25px;
     box-shadow: 0px 5px 6px #048C7C;
-    width: ${width}px;
+    width: 100%;
     padding: 16px;
+    margin-top: 24px;
     `
 export const UserContainer= styled.View`
     display: flex;

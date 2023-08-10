@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { Text } from "react-native";
 
 //Style
 import {
@@ -19,13 +19,11 @@ import {
   TimeText,
   MoreText,
 } from "./style";
-import { Icons } from "../BottomTab/style";
 
-//Imagens
+//Icons
+import { AntDesign, Ionicons, Feather } from "@expo/vector-icons";
 import CheckedIcon from "../../../assets/checkedIcon.png";
-import HeartIcon from "../../../assets/heartIcon.svg";
-import ShareIcon from "../../../assets/ShareIcon.svg";
-import PaperPlaneIcon from "../../../assets/paperPlaneIcon.svg";
+
 interface cardData {
   userImage: any;
   userName: string;
@@ -57,7 +55,7 @@ export default function HomeCard({
           <UserImage source={userImage} />
           <TitleContainer>
             <TitleView>
-              <UserTitle>{ userName }</UserTitle>
+              <UserTitle>{userName}</UserTitle>
               <Checked source={CheckedIcon} />
             </TitleView>
             <TitleView>
@@ -70,17 +68,16 @@ export default function HomeCard({
         <CardText>
           {resumeText}
           <Text>...</Text>
-          <MoreText>
-            {supplementaryText}
-          </MoreText>
+          <MoreText>{supplementaryText}</MoreText>
         </CardText>
         <ReactionsView>
           <HeartView>
-            <Icons source={HeartIcon} />
+            <AntDesign name="hearto" size={30} color="#048C7C" />
+            {/* <AntDesign name="heart" size={30} color="#048C7C"/> */}
             <HeartText>{amountOfLikes}</HeartText>
           </HeartView>
-          <Icons source={ShareIcon} />
-          <Icons source={PaperPlaneIcon} />
+          <Feather name="share-2" size={30} color="#048C7C" />
+          <Ionicons name="paper-plane" size={30} color="#048C7C" />
         </ReactionsView>
       </CardContainer>
     </>
