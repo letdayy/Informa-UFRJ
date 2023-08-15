@@ -8,10 +8,11 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Splash from "./pages/Splash/Splash";
 import OnBoarding1 from "./pages/OnBoardings/OnBoarding1";
 import OnBoarding2 from "./pages/OnBoardings/OnBoarding2";
+import CommunityProfile from "./pages/CommunityProfile/CommunityProfile";
 
 export default function App() {
   return (
-    <OnBoarding2/>
+    <CommunityProfile/>
   );
 }
 
