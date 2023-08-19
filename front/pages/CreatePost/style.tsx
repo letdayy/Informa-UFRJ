@@ -5,6 +5,7 @@ export const Screen = styled.View`
 display:flex;
 flex:1;
 align-items: center;
+background-color: #048C7C;
 `
 
 
@@ -14,4 +15,3 @@ height: 30px;
 margin: 16px 0 0 16px;
 align-self:start;
 `
-

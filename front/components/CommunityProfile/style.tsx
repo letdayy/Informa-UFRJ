@@ -213,3 +213,18 @@ width:20px;
 height: 20px;
 `
 
+export const CreatePostBtn = styled.View`
+width: 74px;
+height: 74px;
+background-color: #048C7C;
+border-radius:100%;
+box-shadow: 0px 4px 4px #048C7C;
+position: fixed;
+bottom:48;
+right: 16;
+`
+export const CreatePostBtnImg = styled.Image`
+width: 35px;
+height: 35px;
+margin: auto;
+`

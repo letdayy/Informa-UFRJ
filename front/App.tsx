@@ -1,18 +1,18 @@
 import React from "react";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import Register from './pages/Register/Register';
-import Profile from "./pages/Profile/Profile";
-import Favorites from "./pages/Favorites/Favorites";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Splash from "./pages/Splash/Splash";
 import OnBoarding1 from "./pages/OnBoardings/OnBoarding1";
 import OnBoarding2 from "./pages/OnBoardings/OnBoarding2";
-import CommunityProfile from "./pages/CommunityProfile/CommunityProfile";
+import Route from './Router'
+
+
 
 export default function App() {
   return (
-    <CommunityProfile/>
+    <Route/>
   );
 }
 
@@ -24,3 +24,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
