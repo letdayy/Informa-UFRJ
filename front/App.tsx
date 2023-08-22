@@ -1,8 +1,12 @@
 import React from 'react';
-import { StatusBar, SafeAreaView, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet,SafeAreaView, Text, View } from 'react-native';
 
 //Telas
 import Home from './src/screens/Home';
+import Register from './pages/Register/Register';
+import Profile from "./pages/Profile/Profile";
+import Favorites from "./pages/Favorites/Favorites";
 
 //Font 
 import { useFonts, Poppins_700Bold, Poppins_600SemiBold_Italic } from '@expo-google-fonts/poppins';
@@ -29,4 +33,13 @@ export default function App() {
       <Home {...News} />
     </SafeAreaView>
   );
-};
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
