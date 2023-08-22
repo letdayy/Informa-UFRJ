@@ -1,8 +1,7 @@
 import styled from "styled-components/native"
 import { Dimensions } from "react-native";
 
-const heightImgPost= 0.4 * Dimensions.get("screen").width; //Altura muda conforme a largura da tela
-// const width= 0.4 * Dimensions.get("screen").height; //Altura muda conforme a largura da tela
+const heightImgPost= 0.4 * Dimensions.get("screen").width;
 
 export const CardContainer = styled.View`
     background: #D9D9D9;
@@ -66,8 +65,9 @@ font-size: 12px;
 margin: 4px 0px;
 text-align: justify;
 `
-export const MoreText= styled.Text`
-    display: none;
+
+export const MoreLessButton= styled.TouchableOpacity`
+color: '#494949';
 `
 export const ReactionsView = styled.View`
     display: flex;

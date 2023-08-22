@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 //Style
 import { FilterButton, FilterText, FilterView } from "./style";
-import { Icons } from "../BottomTab/style";
 
 //Icons
 import { Ionicons, AntDesign } from "@expo/vector-icons";

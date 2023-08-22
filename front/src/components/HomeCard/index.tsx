@@ -1,5 +1,5 @@
-import React from "react";
-import { Text } from "react-native";
+import React, { useState } from "react";
+import { Text, TouchableOpacity } from "react-native";
 
 //Style
 import {
@@ -17,7 +17,7 @@ import {
   HeartView,
   HeartText,
   TimeText,
-  MoreText,
+  MoreLessButton,
 } from "./style";
 
 //Icons
@@ -48,6 +48,9 @@ export default function HomeCard({
   like,
   amountOfLikes,
 }: cardData) {
+  const [isLike, setlike] = useState<boolean>(like)
+  const [activeButton, setButton] = useState<boolean>(false)
+
   return (
     <>
       <CardContainer>
@@ -56,7 +59,7 @@ export default function HomeCard({
           <TitleContainer>
             <TitleView>
               <UserTitle>{userName}</UserTitle>
-              <Checked source={CheckedIcon} />
+              {checked === true ? <Checked source={CheckedIcon} /> : null}
             </TitleView>
             <TitleView>
               <CategoryText>{category}</CategoryText>
@@ -66,14 +69,15 @@ export default function HomeCard({
         </UserContainer>
         <ImagePost source={imagePost} />
         <CardText>
-          {resumeText}
-          <Text>...</Text>
-          <MoreText>{supplementaryText}</MoreText>
+            {activeButton === true ? resumeText + " " + supplementaryText : resumeText + "..." }
+            <MoreLessButton onPress={()=> setButton(!activeButton)}><Text> Ler {activeButton? "menos" : "mais"}</Text></MoreLessButton>
         </CardText>
         <ReactionsView>
           <HeartView>
-            <AntDesign name="hearto" size={30} color="#048C7C" />
-            {/* <AntDesign name="heart" size={30} color="#048C7C"/> */}
+            <TouchableOpacity onPress={ () => setlike(!isLike)}>
+              {isLike === true ? <AntDesign name="heart" size={30} color="#048C7C" /> : <AntDesign name="hearto" size={30} color="#048C7C"/>}
+            </TouchableOpacity>
+            
             <HeartText>{amountOfLikes}</HeartText>
           </HeartView>
           <Feather name="share-2" size={30} color="#048C7C" />
