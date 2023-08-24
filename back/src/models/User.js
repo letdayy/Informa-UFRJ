@@ -48,6 +48,8 @@ User.associate = function(models){
         foreignKey: 'followingId'
     });
 
+    User.hasOne(models.Photo);
+
     User.belongsToMany(models.User, {
         through: 'Follow',
         as: 'followed',

@@ -24,6 +24,7 @@ require('../models/Community')
 require('../models/Post');
 require('../models/User');
 require('../models/Favorites');
+require('../models/Photo');
 
 for (mod in sequelize.models) {
   if (sequelize.models[mod].associate instanceof Function) {
