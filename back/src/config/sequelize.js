@@ -30,4 +30,4 @@ for (mod in sequelize.models) {
     sequelize.models[mod].associate(sequelize.models);
   }
 }
-    
+   

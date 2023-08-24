@@ -1,4 +1,6 @@
 const User = require('../models/User');
+const path = require('path');
+const Photo = require('../models/Photo');
 
 async function create (req, res) {
     try {
@@ -85,4 +87,52 @@ async function unfollow (req, res){
     } catch (error) {
         return res.status(500).json("error");
     }
+}
+
+async function addUserPhoto (req, res){
+    const {id} = req.params;
+
+    try{
+        const user = await User.findByPk(id, {include:{model: Photo}});
+        if(req.file){
+
+            const path = process.env.APP_URL + "/uploads/" + req.file.filename;
+            const photo = await Photo.create({
+                path: path,
+
+            });
+
+            await user.setPhoto(photo);
+        }
+
+        const userUpdated = await User.fundByPk(id, {include:{model: Photo}});
+        return res.status(200).json(userUpdated);
+    } catch(error) {
+        return res.status(500).json({error});
+    }
+}
+
+async function deleteUserPhoto(req, res){
+    const {id} = req.params;
+    try{
+        const photo = await Photo.findByPk(id);
+        const pathDb = photo.path.split("/").slice(-1)[0]
+        await fsPromise.unlink(path.join(__dirname, '..', '..', 'uploads', pathDb));
+        await photo.destroy ();
+        return res.status(200).json("Foto removida com sucesso");
+    } catch (error) {
+        return res.status(500).json({error});
+    }
+} 
+
+module.exports = {
+    create,
+    index,
+    show,
+    update,
+    destroy,
+    follow,
+    unfollow,
+    addUserPhoto,
+    deleteUserPhoto
 }
