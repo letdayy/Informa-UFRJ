@@ -17,7 +17,7 @@ export default function FormAreaComponent() {
     return (
         <InputArea>
             <InputBox>
-                <InputIcon source={require('../../assets/user-icon.png')} />
+                <InputIcon source={require('../../../assets/user-icon.png')} />
                 <Controller
                     name='user'
                     rules={{ required: true }}
@@ -33,7 +33,7 @@ export default function FormAreaComponent() {
                 />
             </InputBox>
             <InputBox>
-                <InputIcon source={require('../../assets/email-icon.png')} />
+                <InputIcon source={require('../../../assets/email-icon.png')} />
                 <Controller
                     name='email'
                     rules={{ required: true }}
@@ -49,7 +49,7 @@ export default function FormAreaComponent() {
                 />
             </InputBox>
             <InputBox>
-                <InputIcon source={require('../../assets/password-icon.png')} />
+                <InputIcon source={require('../../../assets/password-icon.png')} />
                 <Controller
                     name='password'
                     rules={{ required: true }}
@@ -64,11 +64,11 @@ export default function FormAreaComponent() {
                     )}
                 />
                 <Button>
-                    <RevealIcon source={require('../../assets/eye-icon.png')} />
+                    <RevealIcon source={require('../../../assets/eye-icon.png')} />
                 </Button>
             </InputBox>
             <InputBox>
-                <InputIcon source={require('../../assets/password-icon.png')} />
+                <InputIcon source={require('../../../assets/password-icon.png')} />
                 <Controller
                     name='confirm-password'
                     rules={{ required: true }}
@@ -83,7 +83,7 @@ export default function FormAreaComponent() {
                     )}
                 />
                 <Button>
-                    <RevealIcon source={require('../../assets/eye-icon.png')} />
+                    <RevealIcon source={require('../../../assets/eye-icon.png')} />
                 </Button>
             </InputBox>
         </InputArea>

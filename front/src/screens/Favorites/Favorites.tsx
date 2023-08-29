@@ -8,7 +8,7 @@ export default function Favorites() {
         <Screen>
             <Header>
                 <Button>
-                    <Back source={require('../../assets/back-icon2.png')} />
+                    <Back source={require('../../../assets/user-icon2.png')} />
                 </Button>
             </Header>
             <UserNSearch />

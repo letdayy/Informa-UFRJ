@@ -6,14 +6,14 @@ export default function UserNSearch() {
         <SearchArea>
             <Button>
                 <UserArea>
-                    <UserIcon source={require('../../assets/user-icon2.png')} />
+                    <UserIcon source={require('../../../assets/user-icon2.png')} />
                     <Username>
                         Username
                     </Username>
                 </UserArea>
             </Button>
             <Button>
-                <SearchIcon source={require('../../assets/search-icon.png')} />
+                <SearchIcon source={require('../../../assets/search-icon.png')} />
             </Button>
         </SearchArea>
     )

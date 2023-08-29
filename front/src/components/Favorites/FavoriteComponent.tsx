@@ -13,7 +13,7 @@ export default function FavoritesArea({ username, name }: FavoriteInfo) {
         <FavoriteContainer>
             <Button>
                 <UserInfo>
-                    <FavoriteUserIcon source={require('../../assets/user-icon2.png')} />
+                    <FavoriteUserIcon source={require('../../../assets/user-icon2.png')} />
                     <View>
                         <Username style={{ fontSize: 20 }}>
                             {username}

@@ -5,7 +5,7 @@ export default function Profile() {
     return (
         <AddPhtArea>
             <Button>
-                <ProfileIcon source={require('../../assets/user-icon.png')} />
+                <ProfileIcon source={require('../../../assets/user-icon.png')} />
             </Button>
             <UsernameText>
                 Username

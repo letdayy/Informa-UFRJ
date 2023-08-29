@@ -8,9 +8,9 @@ export default function Profile() {
         <Screen>
             <Header>
                 <BackButton>
-                    <Back source={require('../../assets/back-icon.png')} />
+                    <Back source={require('../../../assets/back-icon.png')} />
                 </BackButton>
-                <Logo source={require('../../assets/Logo-profile.png')} />
+                <Logo source={require('../../../assets/Logo-profile.png')} />
             </Header>
             <AddPhotoComponent />
             <ProfileOptions/>

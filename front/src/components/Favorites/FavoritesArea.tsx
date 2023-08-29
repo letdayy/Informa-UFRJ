@@ -9,7 +9,7 @@ export default function FavoritesArea() {
                 Meus Favoritos
             </SessionTitle>
             <Button>
-                <ExpandSessionIcon source={require('../../assets/expand-icon.png')} />
+                <ExpandSessionIcon source={require('../../../assets/expand-icon.png')} />
             </Button>
         </SessionTitleArea>
         <FavoritesBlock>
