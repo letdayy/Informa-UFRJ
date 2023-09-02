@@ -5,6 +5,7 @@ const UserController = require('../controllers/UserController');
 const PostConstroller = require('../controllers/PostConstroller');
 const FavoriteController = require('../controllers/FavoriteController');
 const CommentController = require('../controllers/CommentController');
+const CommunityController = require('../controllers/CommunityController');
 
 const path = require("path");
 const multer = require("multer");
@@ -48,9 +49,9 @@ router.put('/Post/:id', PostConstroller.update);
 router.delete('/Post/:id', PostConstroller.destroy);
 
 //rotas para Favorite
-router.get('/Favorites/User/:userId', FavoritesController.index);
-router.put('/addToFavorites/User/:userId/Music/:musicId', FavoritesController.addToFavorites);
-router.delete('/removeFromFavorites/User/:userId/Music/:musicId', FavoritesController.removeFromFavorites);
+router.get('/Favorites/User/:userId', FavoriteController.index);
+router.put('/addToFavorites/User/:userId/Music/:musicId', FavoriteController.addToFavorites);
+router.delete('/removeFromFavorites/User/:userId/Music/:musicId', FavoriteController.removeFromFavorites);
 
 
 //rotas para Comment
@@ -63,5 +64,11 @@ router.put('/addComment/Music/:musicId/User/:userId', CommentController.addComme
 
 
 //rotas para Community
+router.post('/Community', CommentController.create);
+router.get('/Community/:id', CommunityController.show);
+router.get('/Community', CommunityController.index);
+router.put('/Community/:id', CommunityController.update);
+router.delete('/Community/:id', CommunityController.destroy);
+
 
 module.exports = router;
