@@ -1,5 +1,6 @@
 import React from "react";
-import { Option, Button, OptionText } from "./style";
+import { Option, OptionText } from "./style";
+import { useNavigation } from "@react-navigation/native";
 
 type OptionInfo = {
     text: string;
@@ -7,13 +8,16 @@ type OptionInfo = {
 
 
 export default function OptionComponent({text}:OptionInfo) {
+
+    const navigation = useNavigation()
+
     return (
-        <Button>
-            <Option>
+            <Option
+            onPress={()=>{navigation.navigate(text)}}
+            >
                 <OptionText>
                     {text}
                 </OptionText>
             </Option>
-        </Button>
     )
 }

@@ -6,9 +6,9 @@ export default function Register() {
     return (
         <Screen>
             <BackButton>
-                <Back source={require('../../assets/back-icon.png')} />
+                <Back source={require('../../../assets/back-icon.png')} />
             </BackButton>
-            <Logo source={require('../../assets/Logo.png')} />
+            <Logo source={require('../../../assets/Logo.png')} />
             <FormAreaComponent />
             <ConfirmButton>
                 <ButtonText>Cadastrar</ButtonText>

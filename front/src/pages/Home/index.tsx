@@ -31,7 +31,7 @@ export default function Home({ card1, card2 }: any) {
           <HomeCard {...card2} />
         </View>
       </ScrollView>
-      <BottomTab />
+      {/* <BottomTab /> */}
     </HomeView>
   );
 }
